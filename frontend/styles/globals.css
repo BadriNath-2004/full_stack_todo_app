@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+ font-family: 'Inter', sans-serif;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  background-color: #f9fafb;
+}
+
+body {
+ background-color: transparent;
+}
+
+a {
+ text-decoration: none;
+}
+/* Custom utility classes */
+.btn-primary {
+ @apply px-6 py-2 rounded-full bg-[#2c3e50] text-white hover:bg-[#1c2833] transition duration-300 shadow-md cursor-pointer text-base font-medium;
+}
+
+.btn-outline {
+ @apply px-6 py-2 rounded-full border border-[#2c3e50] text-[#2c3e50] hover:bg-[#2c3e50] hover:text-white transition duration-300 shadow-md cursor-pointer text-base font-medium;
+}
+
+.glassmorphism {
+ @apply bg-white/40 backdrop-blur-lg border border-gray-200 rounded-xl;
+}
+
+.text-primary {
+ @apply text-[#2c3e50];
+}
+
