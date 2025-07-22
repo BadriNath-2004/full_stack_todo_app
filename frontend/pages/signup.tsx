@@ -23,7 +23,7 @@ export default function SignupPage() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:4000/api/auth/register", {
+      const response = await fetch("http://localhost:4000/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
@@ -33,7 +33,7 @@ export default function SignupPage() {
       if (!response.ok) throw new Error(data.message || t("signup_failed"));
 
       login(data.token, data.user);
-      router.push("/todos");
+      router.push("/login");
     } catch (err: any) {
       setError(err.message);
     }
